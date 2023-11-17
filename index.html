@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Civilization game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="game-container">
+    <div id="resource-bars">
+        <div id="happinessBar" class="resource-bar">Happiness: 100</div>
+        <div id="wealthBar" class="resource-bar">Wealth: 100</div>
+        <div id="supportBar" class="resource-bar">Support: 100</div>
+    </div>
+
+    <div id="options">
+        <button id="upgradeButton">Upgrade Age</button>
+        <button id="drawButton">Draw Card</button>  
+        <div id="storyBar">The Story: Welcome</div>
+    </div>
+
+    <div id="game-area">
+        <img id="imageDisplay" src="library/backgrounds/stone_age.png" alt="village">
+        <div id="cardDisplay"></div>
+        <div id="currentAge">Current Age: Stone age</div>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

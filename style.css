@@ -1,0 +1,118 @@
+
+/*Style for gameplay area*/
+#game-container {
+    font-family: 'Arial', sans-serif;
+}
+
+#resource-bars {
+    position: fixed;
+    width: 250px;
+    height:200px;
+    left: 160px;
+    bottom: 270px;
+    background-color: bisque;
+    background-position: center;
+}
+
+.resource-bar {
+    font-size: 25px;
+    text-align: center;
+    margin:25px;
+}
+
+#game-area {
+    width: 1024px;   /* Width of the game area */
+    height: 720px;  /* Height of the game area */
+    border: 1px solid black; /* Border for the game area */
+    display: flex;  /* Enables Flexbox for this container */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Distributes space between children */
+    align-items: center; /* Center children horizontally */
+    margin: auto; /* Optionally, to center the game area in the middle of the screen */
+}
+
+
+#game-area img {
+    max-width: 100%; /* Ensure the image is not wider than the game area */
+    max-height: calc(100% - 200px); /* Adjust height to leave space for cards */
+    display: block; /* Remove extra space under the image */
+}
+
+/*Style for User interace area*/
+#options {
+    position: fixed; /* or 'fixed' if you want it to stay in place while scrolling */
+    right: 0; /* Align to the right side of the screen */
+    top: 20; /* Adjust as needed */
+    width: 250px; /* Set the width of the deck container */
+    height: 100%; /* Set the height to take the full vertical space */
+}
+
+#upgradeButton {
+    height: 60px;
+    width: 180px;
+    font-size: 20px;
+    margin-bottom: 20px; /* Adds a margin below the upgrade button */
+}
+
+#upgradeButton:disabled {
+    color: #aaa;
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+#drawButton {
+    height: 60px;
+    width: 180px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#storyBar{
+    padding: 10px;
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #ddd; /* Light border */
+    margin: 20px 0; /* Some margin around the bar */
+    text-align: left; 
+    font-size: 20px;
+}
+
+
+/* Style for game components*/
+#cardDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers cards in the display area */
+    gap: 10px; /* Adds space between cards */
+    margin: 20px 0; /* Spacing around the card display area */
+}
+
+
+.card {
+    width: 190px;
+    height: 250px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(2.05); /* Slightly increase the size */
+    background-color: rgb(243, 236, 236);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+}
+
+.card-title, .card-cost, .card-increase, .card-description {
+    margin: 5px 0;
+}
+
+#currentAge {
+    font-size: 20px;
+}
