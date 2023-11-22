@@ -2,6 +2,11 @@
 document.getElementById("upgradeButton").addEventListener("click", upgradeImage);
 const upgradeButton = document.getElementById("upgradeButton");
 upgradeButton.disabled = true; // Initially disable the upgrade button
+// Include the Card class from the separate file
+// Make sure to adjust the file path according to your project structure
+// For example, if both files are in the same directory, you can simply use "./card.js"
+import { Card } from "./card.js";
+
 
 const images = [ 
     "library/backgrounds/stone_age.png",
